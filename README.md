@@ -1,0 +1,1 @@
+# hit-counter [![CI](https://github.com/vanhanenjjv/hit-counter/actions/workflows/ci.yml/badge.svg)](https://github.com/vanhanenjjv/hit-counter/actions/workflows/ci.yml) <img src="https://hit-counter.vanhanen.workers.dev?tag=github|vanhanenjjv|hit-counter" />

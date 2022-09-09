@@ -1,0 +1,13 @@
+{
+  "name": "hit-counter",
+  "version": "0.0.0",
+  "devDependencies": {
+    "wrangler": "2.0.28"
+  },
+  "private": true,
+  "scripts": {
+    "build": "dotnet fable --silent",
+    "start": "wrangler dev",
+    "deploy": "wrangler publish"
+  }
+}

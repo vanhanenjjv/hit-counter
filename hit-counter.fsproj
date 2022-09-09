@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="src\Fable.CloudFlare.Workers.fs" />
+    <Compile Include="src\Pixel.fs" />
+    <Compile Include="src\Handler.fs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Fable.Browser.Blob" Version="1.2.0" />
+    <PackageReference Include="Fable.Browser.Url" Version="1.1.0" />
+    <PackageReference Include="Fable.Core" Version="3.7.1" />
+    <PackageReference Include="Fable.Promise" Version="3.1.3" />
+  </ItemGroup>
+
+</Project>

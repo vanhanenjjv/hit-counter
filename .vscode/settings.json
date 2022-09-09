@@ -1,0 +1,28 @@
+{
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/Thumbs.db": true,
+        ".config": true,
+        "bin": true,
+        "obj": true,
+        "fable_modules": true,
+        "node_modules": true
+    },
+    "explorer.fileNesting.enabled": true,
+    "explorer.fileNesting.patterns": {
+        "*.fs": "${capture}.fs.js"
+    },
+    "FSharp.inlayHints.typeAnnotations": false,
+    "FSharp.inlayHints.enabled": false,
+    "editor.inlayHints.enabled": "offUnlessPressed",
+    "FSharp.inlayHints.disableLongTooltip": true,
+    "[fsharp]": {
+        "editor.tabSize": 4,
+        "editor.insertSpaces": true,
+        "editor.formatOnSave": true
+    }
+}

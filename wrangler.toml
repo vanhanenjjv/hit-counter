@@ -1,0 +1,7 @@
+name = "hit-counter"
+main = "src/Handler.fs.js"
+compatibility_date = "2022-09-03"
+
+[[kv_namespaces]]
+  binding = "HIT_COUNTER"
+  id = "7c32808d91c94aba88c0877a855e46a7"

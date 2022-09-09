@@ -1,0 +1,12 @@
+# .NET
+bin/
+obj/
+
+# Node
+
+node_modules/
+
+# Fable
+
+fable_modules/
+src/*.fs.js
