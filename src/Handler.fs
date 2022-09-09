@@ -5,7 +5,7 @@ open Fable.Core.JsInterop
 
 open Fable.CloudFlare.Workers
 
-type Environment = { HIT_COUNTER: KVNamespace }
+type private Environment = { HIT_COUNTER: KVNamespace }
 
 let private getIndex (req: Request) (env: Environment) =
     promise {
