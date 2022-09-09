@@ -7,7 +7,7 @@ open Fable.CloudFlare.Workers
 
 type Environment = { HIT_COUNTER: KVNamespace }
 
-let getIndex (req: Request) (env: Environment) =
+let private getIndex (req: Request) (env: Environment) =
     promise {
         let url = URL.Create(req.url)
 
@@ -39,7 +39,11 @@ let getIndex (req: Request) (env: Environment) =
             | None -> promise { return Response.Create("Missing tag", Response.Options(status = 200)) }
     }
 
-let notFound () =
+let private getList (env: Environment) =
+    promise { return Response.Create("OK") }
+
+
+let private notFound () =
     promise { return Response.Create("Not found", Response.Options(status = 404)) }
 
 exportDefault
@@ -51,5 +55,6 @@ exportDefault
                 return!
                     match req.method, url.pathname with
                     | "GET", "/" -> getIndex req env
+                    | "GET", "/list" -> getList env
                     | _ -> notFound ()
             } }
