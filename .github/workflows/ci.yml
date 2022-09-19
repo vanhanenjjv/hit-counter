@@ -43,3 +43,6 @@ jobs:
       with:
         apiToken: ${{ secrets.CF_API_TOKEN }}
         accountId: ${{ secrets.CF_ACCOUNT_ID }}
+
+    - name: Unfuck Wrangler
+      run: sudo chown -R $USER:$USER $GITHUB_WORKSPACE/.wrangler
