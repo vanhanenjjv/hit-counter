@@ -41,7 +41,7 @@ jobs:
       run: npm run build
       
     - name: Publish
-      uses: vanhanenjjv/wrangler-action@2.0.0
+      uses: vanhanenjjv/wrangler-action@master
       with:
         apiToken: ${{ secrets.CF_API_TOKEN }}
         accountId: ${{ secrets.CF_ACCOUNT_ID }}
