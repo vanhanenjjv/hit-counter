@@ -41,10 +41,7 @@ jobs:
       run: npm run build
       
     - name: Publish
-      uses: vanhanenjjv/wrangler-action@master
+      uses: vanhanenjjv/wrangler-action@main
       with:
         apiToken: ${{ secrets.CF_API_TOKEN }}
         accountId: ${{ secrets.CF_ACCOUNT_ID }}
-
-    - name: Unfuck Wrangler
-      run: sudo chown -R $USER:$USER $GITHUB_WORKSPACE/.wrangler
