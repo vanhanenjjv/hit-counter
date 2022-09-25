@@ -32,17 +32,18 @@ jobs:
       with:
         node-version: 16
 
+    - name: Restore dependencies
+  #    if: steps.cache.outputs.cache-hit != 'true'
+      run: |
+        dotnet restore
+        dotnet tool restore
+
     - name: Setup Wrangler
       uses: vanhanenjjv/setup-wrangler@main
       with:
         apiToken: ${{ secrets.CF_API_TOKEN }}
         accountId: ${{ secrets.CF_ACCOUNT_ID }}
 
-    - name: Restore dependencies
-  #    if: steps.cache.outputs.cache-hit != 'true'
-      run: |
-        dotnet restore
-        dotnet tool restore
 
     - name: Build
       run: npm run build
