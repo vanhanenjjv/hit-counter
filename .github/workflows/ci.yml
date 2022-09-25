@@ -27,8 +27,7 @@ jobs:
       with:
         dotnet-version: 6.0.x
       
-    - name: Setup Node.js
-      uses: actions/setup-node@v3
+    - uses: actions/setup-node@v3
       with:
         node-version: 16
 
@@ -37,16 +36,11 @@ jobs:
       run: |
         dotnet restore
         dotnet tool restore
-
-#    - name: Setup Wrangler
-#      uses: vanhanenjjv/setup-wrangler@main
-#      with:
-#        apiToken: ${{ secrets.CF_API_TOKEN }}
-#        accountId: ${{ secrets.CF_ACCOUNT_ID }}
-
-
     - name: Build
       run: npm run build
-
+      
     - name: Publish
-      run: wrangler publish
+      uses: vanhanenjjv/wrangler-action@main
+      with:
+        apiToken: ${{ secrets.CF_API_TOKEN }}
+        accountId: ${{ secrets.CF_ACCOUNT_ID }}
